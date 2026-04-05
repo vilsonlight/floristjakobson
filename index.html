@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video header</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="hero">
+      <!-- taustavideo -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="images/movie.mp4" type="video/mp4" />
+      </video>
+
+      <!-- navigatsioon -->
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Avaleht</a></li>
+          <li><a href="#">Teenused</a></li>
+          <li><a href="#">Galerii</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- tekst video peal -->
+      <div class="hero-text">
+        <h1>Austades kallite mälestust</h1>
+        <p>me kallid elavad edasi meie mälestustes</p>
+
+        <div class="buttons">
+          <a href="#" class="btn">Vaata galeriid</a>
+          <a href="#" class="btn btn-outline">Telli lilled</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="image-box">
+          <img src="images/anu 5.png" alt="Lilled" />
+        </div>
+
+        <div class="text-box">
+          <h2>Saame tuttavaks</h2>
+
+          <p>
+            Olen Anu Jakobson. Floristikaga tegelenud üle 30 aasta. Tänasel
+            päeval keskendudnud peamiselt leinatöödele. Minu jaoks on iga
+            lilleseade nagu kunstniku jaoks maal või helilooja jaoks meloodia.
+            Kui hindad seda kunsti oled õiges kohas.
+          </p>
+        </div>
+
+        <div class="image-box">
+          <img src="images/logo must.png" alt="Lilled" />
+        </div>
+      </div>
+    </section>
+
+    <div class="product-grid">
+      <div class="product-box">
+        <img src="images/Bach.webp" alt="Toode 2" />
+        <h3>Bach</h3>
+        <p>roos, liilia, ∅60cm 210€, ∅80cm 250€</p>
+      </div>
+
+      <div class="product-box">
+        <img src="images/Beethoven.webp" alt="Toode 2" />
+        <h3>Beethoven</h3>
+        <p>roos, hortensia, krüsanteem ∅60cm 210€, ∅80cm 250€</p>
+      </div>
+
+      <div class="product-box">
+        <img src="images/vivaldi.webp" alt="Toode 3" />
+        <h3>Vivaldi</h3>
+        <p>roos, liilia, krüsanteem, ∅60cm 185€, ∅80cm 225</p>
+      </div>
+
+      <div class="product-box">
+        <img src="images/Mozart.webp" alt="Toode 4" />
+        <h3>Mozart</h3>
+        <p>valge ja punane roos, liilia ∅60cm 210€, ∅80cm 250€</p>
+      </div>
+
+      <div class="product-box">
+        <img src="images/Alnitak.webp" alt="Toode 4" />
+        <h3>Alnitak</h3>
+        <p>roos, preeriakell, krüsanteem, liilia ∅60cm 145€, ∅80cm 185€</p>
+      </div>
+
+      <div class="product-box">
+        <img src="images/Capella.webp" alt="Toode 4" />
+        <h3>Capella</h3>
+        <p>krüsanteem, roos, kalla ∅60cm 125€, ∅80cm 165€</p>
+      </div>
+
+      <div class="product-box">
+        <img src="images/Castor.webp" alt="Toode 4" />
+        <h3>Castor</h3>
+        <p>roos, kalla, liilia ∅60cm 165€, ∅80cm 210€</p>
+      </div>
+
+      <div class="product-box">
+        <img src="images/Felis.webp" alt="Toode 4" />
+        <h3>Felis</h3>
+        <p>roos, liilia, preeriakell, krüsanteem ∅60cm 145€, ∅80cm 185€</p>
+      </div>
+    </div>
+
+    <section class="order-form">
+      <h2>Tellimuse vormistamine</h2>
+
+      <form action="https://formspree.io/f/xkopbzkl" method="POST">
+        <label for="name">1. Tellija nimi</label>
+        <input type="text" id="name" name="nimi" required />
+
+        <label for="phone">2. Tellija telefoni number</label>
+        <input type="tel" id="phone" name="telefon" required />
+
+        <label for="email">3. Tellija e-mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="model">4. Valitud mudel</label>
+        <select id="model" name="mudel">
+          <option value="Leinapärg klassikaline">Leinapärg klassikaline</option>
+          <option value="Leinakimp valge">Leinakimp valge</option>
+          <option value="Leinaseade punane">Leinaseade punane</option>
+        </select>
+
+        <label for="text">5. Tekst lindil</label>
+        <textarea id="text" name="lint" rows="3"></textarea>
+
+        <label for="date">6. Tarne kuupäev</label>
+        <input type="date" id="date" name="tarne_kuupaev" />
+
+        <label for="address">7. Tarne aadress</label>
+        <textarea id="address" name="aadress" rows="3"></textarea>
+
+        <button type="submit">Saada tellimus</button>
+      </form>
+    </section>
+  </body>
+
+  <footer>
+    <footer class="contact-footer">
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+372 5555 5555</span>
+      </div>
+
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@floristjakobson.ee</span>
+      </div>
+    </footer>
+  </footer>
+</html>
