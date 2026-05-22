@@ -96,19 +96,9 @@ nav a:hover {
 }
 
 @media (max-width: 700px) {
-  body {
-    padding-top: 200px;
-  }
-
-  /*
-
-@media (max-width: 700px) {
   nav {
-    padding: 0.6em 1em;
-
+    padding: 1.4em 1em;
   }
-
-*/
 
   nav ul {
     gap: 1em;
