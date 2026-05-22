@@ -98,7 +98,7 @@ nav a:hover {
 /* SIIT ALGAB MOBIILI VAADE */
 @media (max-width: 700px) {
   nav {
-    padding: 1.4em 1em;
+    padding: 0.8em 1em;
     flex-direction: column;
     gap: 14px;
   }
@@ -170,6 +170,10 @@ nav a:hover {
   font-size: clamp(2rem, 5vw, 4.5rem);
   line-height: 1.1;
   margin-bottom: 24px;
+
+  text-shadow:
+    2px 2px 8px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
