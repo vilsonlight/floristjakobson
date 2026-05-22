@@ -95,19 +95,31 @@ nav a:hover {
   opacity: 0.6;
 }
 
+/* SIIT ALGAB MOBIILI VAADE */
 @media (max-width: 700px) {
   nav {
-    padding: 2.5em 1em;
+    padding: 1.4em 1em;
+    flex-direction: column;
+    gap: 14px;
   }
 
   nav ul {
-    gap: 1em;
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .logo-link img {
+    height: 36px;
   }
 
   nav a {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
+/* SIIN LÕPEB MOBIILI VAADE */
 
 /* HERO SLIDER */
 
