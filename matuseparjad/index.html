@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="/style.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap"
       rel="stylesheet"
@@ -47,16 +50,28 @@
         "@type": "Florist",
         "name": "Florist Jakobson",
         "url": "https://floristjakobson.ee/matuseparjad/",
-        "image": "https://floristjakobson.ee/images/slaider1.webp",
+        "image": "https://floristjakobson.ee/images/Matuseparg-Chopin-slaider.webp",
         "description": "Matusepärjad Tallinnas ja Harjumaal. Kuuseokstega ja täislilledest matusepärjad, leinakimbud ning professionaalne floristika aastast 1995.",
         "telephone": "+37253423572",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Suvila 6",
           "addressLocality": "Tallinn",
+          "addressRegion": "Harjumaa",
           "addressCountry": "EE"
         },
-        "areaServed": ["Tallinn", "Harjumaa"],
+
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Tallinn"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Harjumaa"
+          }
+        ],
+
         "serviceType": ["Matusepärjad", "Leinakimbud", "Leinaseaded"],
 
         "sameAs": [
@@ -74,7 +89,7 @@
           <a href="/" class="logo-link">
             <img
               src="/images/logo23.webp"
-              alt="Florist Jakobson logo"
+              alt="Florist Jakobson – matusepärjad Tallinnas ja Harjumaal"
               width="25"
               height="25"
             />
@@ -113,10 +128,9 @@
           </div>
         </div>
 
-
-           <div class="big-slide">
+        <div class="big-slide">
           <img
-            src="/images/Matuseparjad-salider-b.webp"
+            src="/images/Matuseparjad-slaider-b.webp"
             alt="Matusepärjad Tallinnas ja Harjumaal"
             width="1920"
             height="1080"
@@ -127,10 +141,9 @@
           </div>
         </div>
 
-
-          <div class="big-slide">
+        <div class="big-slide">
           <img
-            src="/images/Matuseparjad-salider-b1.webp"
+            src="/images/Matuseparjad-slaider-b1.webp"
             alt="Matusepärjad Tallinnas ja Harjumaal"
             width="1920"
             height="1080"
@@ -140,18 +153,13 @@
             <h2>Matusepärjad Tallinnas ja Harjumaal</h2>
           </div>
         </div>
-
-
-
-
-
       </div>
     </header>
 
     <section class="seo-section">
       <div class="seo-container">
         <div class="seo-box">
-          <h2>Kogemus alates 1995</h2>
+          <h2>Spetsialiseerunud leinatöödele alates 1995</h2>
           <p>
             Florist Jakobson on spetsialiseerunud leinatöödele ja
             matusefloristikale. Iga pärg valmib läbimõeldult ning lähtuvalt
@@ -680,7 +688,7 @@
           <option value="Chopin">Chopin</option>
           <option value="Foo Loo">Foo Loo</option>
           <option value="Lesath">Lesath</option>
-          <option value="Hädel">Händel</option>
+          <option value="Händel">Händel</option>
         </select>
 
         <label for="size">5. Suurus</label>
@@ -882,7 +890,7 @@
           <!-- Social -->
           <div class="footer-social">
             <a
-              href="https://www.facebook.com/floristjakobson
+              href="https://www.facebook.com/floristjakobson"
               target="_blank"
               aria-label="Facebook"
             >
