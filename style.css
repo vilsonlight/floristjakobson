@@ -810,3 +810,120 @@ section {
 
   color: #3a342f;
 }
+
+/* TEHTUD TÖÖDE GALERII */
+
+.work-gallery {
+  padding: 70px 20px;
+  background: #fff;
+}
+
+.work-gallery-head {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.work-gallery-head h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.work-gallery-head p {
+  color: #666;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.gallery-slider {
+  max-width: 1000px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gallery-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 18px;
+
+  transition: transform 0.5s ease;
+}
+
+.gallery-track img {
+  width: 220px;
+  min-width: 220px;
+  height: 220px;
+
+  object-fit: cover;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  display: block;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-arrow {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #222;
+  color: #fff;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition: 0.25s;
+}
+
+.gallery-arrow:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .gallery-track img {
+    width: 180px;
+    min-width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-slider {
+    gap: 10px;
+  }
+
+  .gallery-track {
+    gap: 12px;
+  }
+
+  .gallery-track img {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .gallery-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 22px;
+  }
+}
