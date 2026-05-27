@@ -132,7 +132,7 @@
         <div class="big-slide big-slide-active">
           <img
             src="/images/Leinakimbud-slaider-a.webp"
-            alt="Matusepärjad kulleriga Tallinnas ja Harjumaal"
+            alt="Leinakimbud kulleriga Tallinnas ja Harjumaal"
             width="1920"
             height="1080"
           />
@@ -694,6 +694,7 @@
           <option value="LE10">LE10</option>
           <option value="LE11">LE11</option>
           <option value="LE12">LE12</option>
+
           <option value="Baham">Baham</option>
           <option value="Bunda">Bunda</option>
           <option value="Maia">Maia</option>
@@ -718,8 +719,11 @@
           required
         ></textarea>
 
-        <label for="time">7. Soovitud kellaaeg</label>
-        <input type="time" id="time" name="tarne_aeg" />
+        <label for="date">7. Tarne kuupäev</label>
+        <input type="date" id="date" name="tarne_kuupaev" required />
+
+        <label for="time">8. Tarne kellaaeg</label>
+        <input type="time" id="time" name="tarne_aeg" required />
 
         <label>9. Tasumise viis</label>
 
@@ -737,6 +741,7 @@
             />
             Kauba kättesaamisel sularahas
           </label>
+
           <p>
             <strong>Kulleri hind:</strong>
             Kulleri tasu Tallinnas ja Harjumaal on 10 €. Kahe või enama toote
@@ -744,7 +749,7 @@
           </p>
         </div>
 
-        <label for="notes">Märkused</label>
+        <label for="notes">10. Märkused</label>
         <textarea id="notes" name="markused" rows="3"></textarea>
 
         <button type="submit">Saada tellimus</button>
