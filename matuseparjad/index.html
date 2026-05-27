@@ -700,7 +700,6 @@
         </select>
 
         <label for="text">6. Tekst lindil</label>
-
         <textarea
           id="text"
           name="lint"
@@ -717,10 +716,13 @@
           required
         ></textarea>
 
-        <label for="time">8. Soovitud kellaaeg</label>
-        <input type="time" id="time" name="uleandmise_aeg" />
+        <label for="date">8. Tarne kuupäev</label>
+        <input type="date" id="date" name="tarne_kuupaev" required />
 
-        <label>9. Tasumise viis</label>
+        <label for="time">9. Tarne kellaaeg</label>
+        <input type="time" id="time" name="uleandmise_aeg" required />
+
+        <label>10. Tasumise viis</label>
 
         <div class="payment-options">
           <label>
@@ -736,6 +738,7 @@
             />
             Kauba kättesaamisel sularahas
           </label>
+
           <p>
             <strong>Kulleri hind:</strong>
             Kulleri tasu Tallinnas ja Harjumaal on 10 €. Kahe või enama toote
@@ -743,7 +746,7 @@
           </p>
         </div>
 
-        <label for="notes">10. Märkused</label>
+        <label for="notes">11. Märkused</label>
         <textarea id="notes" name="markused" rows="3"></textarea>
 
         <button type="submit">Saada tellimus</button>
@@ -989,6 +992,54 @@
           message.scrollIntoView({ behavior: "smooth" });
         }
       });
+    </script>
+
+    <script>
+      const galleryTrack = document.querySelector(".gallery-track");
+      const galleryImages = document.querySelectorAll(".gallery-track img");
+      const prevBtn = document.querySelector(".gallery-prev");
+      const nextBtn = document.querySelector(".gallery-next");
+
+      let galleryIndex = 0;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 560) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 4;
+      }
+
+      function updateGallery() {
+        const visibleCount = getVisibleCount();
+        const maxIndex = Math.max(galleryImages.length - visibleCount, 0);
+
+        if (galleryIndex > maxIndex) galleryIndex = maxIndex;
+        if (galleryIndex < 0) galleryIndex = 0;
+
+        const imageWidth = galleryImages[0].offsetWidth;
+        const gap = parseInt(getComputedStyle(galleryTrack).gap) || 0;
+        const moveAmount = galleryIndex * (imageWidth + gap);
+
+        galleryTrack.style.transform = `translateX(-${moveAmount}px)`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        const visibleCount = getVisibleCount();
+        const maxIndex = Math.max(galleryImages.length - visibleCount, 0);
+
+        galleryIndex = galleryIndex >= maxIndex ? 0 : galleryIndex + 1;
+        updateGallery();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        const visibleCount = getVisibleCount();
+        const maxIndex = Math.max(galleryImages.length - visibleCount, 0);
+
+        galleryIndex = galleryIndex <= 0 ? maxIndex : galleryIndex - 1;
+        updateGallery();
+      });
+
+      window.addEventListener("resize", updateGallery);
+      window.addEventListener("load", updateGallery);
     </script>
   </body>
 </html>
