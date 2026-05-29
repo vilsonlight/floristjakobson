@@ -239,7 +239,7 @@ section {
 }
 
 .tooted-container {
-  max-width: 1180px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -456,6 +456,11 @@ section {
   color: #1a7f37;
   border-radius: 6px;
   font-weight: 600;
+}
+
+.order-form input[type="date"],
+.order-form input[type="time"] {
+  min-height: 42px;
 }
 
 /* KLIENTIDE KOMMENTAARID */
