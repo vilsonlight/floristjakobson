@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sarikapärg Tallinnas ja Harjumaal | Florist Jakobson</title>
+
+    <meta
+      name="description"
+      content="Sarikapärg läbimõõduga 80 cm. Hind 65 €. Tasuta kohaletoimetamine Tallinnas ja Harjumaal. Sobib sarikapeoks eramule, kortermajale ja ehitusobjektile."
+    />
+
+    <link rel="canonical" href="https://floristjakobson.ee/sarikaparg/" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      property="og:title"
+      content="Sarikapärg Tallinnas ja Harjumaal | Florist Jakobson"
+    />
+
+    <meta
+      property="og:description"
+      content="Sarikapärg läbimõõduga 80 cm. Hind 65 €. Tasuta kohaletoimetamine Tallinnas ja Harjumaal."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://floristjakobson.ee/sarikaparg/" />
+    <meta
+      property="og:image"
+      content="https://floristjakobson.ee/images/Sarikaparg.webp"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/Logo48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/Logo32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/images/logo512.png"
+    />
+    <link rel="apple-touch-icon" href="/images/logo512.png" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Florist",
+        "name": "Florist Jakobson",
+        "url": "https://floristjakobson.ee/",
+        "logo": "https://floristjakobson.ee/images/logo512.png",
+        "image": "https://floristjakobson.ee/images/Sarikaparg.webp",
+        "description": "Sarikapärg läbimõõduga 80 cm. Hind 65 €. Tasuta kohaletoimetamine Tallinnas ja Harjumaal.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Suvila 6",
+          "addressLocality": "Tallinn",
+          "addressCountry": "EE"
+        },
+        "telephone": "+37253423572",
+        "areaServed": ["Tallinn", "Harjumaa"],
+        "priceRange": "€€"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Kui suur on sarikapärg?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Florist Jakobsoni valmistatav sarikapärg on läbimõõduga 80 cm."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kui palju sarikapärg maksab?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sarikapärja hind on 65 €."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kas sarikapärg tuuakse kohale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tallinnas ja Harjumaal toome sarikapärja tasuta kohale kokkulepitud ajal."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/" class="logo-link">
+            <img
+              src="/images/logo23.webp"
+              alt="Florist Jakobson logo"
+              width="25"
+              height="25"
+            />
+          </a>
+        </li>
+
+        <li><a href="/matuseparjad/">Matusepärjad</a></li>
+        <li><a href="/leinakimbud/">Leinakimbud</a></li>
+        <li><a href="/sarikaparg/">Sarikapärg</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero-header">
+      <div class="big-slider">
+        <div class="big-slide big-slide-active">
+          <img
+            src="/images/Sarikaparg-Tallinnas-slaider4.webp"
+            alt="Sarikapärg sarikapeoks"
+            width="1920"
+            height="1080"
+          />
+
+          <div class="big-hero-text">
+            <h1>Sarikapärg sarikapeoks</h1>
+          </div>
+        </div>
+
+        <div class="big-slide">
+          <img
+            src="/images/Sarikaparg-Tallinnas-slaider6.webp"
+            alt="Sarikapärg tasuta kohaletoimetamisega Tallinnas ja Harjumaal"
+            width="1920"
+            height="1080"
+          />
+
+          <div class="big-hero-text">
+            <h2>Tasuta kuller Tallinnas ja Harjumaal</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="intro-section">
+      <div class="intro-container">
+        <p>
+          Florist Jakobson valmistab sarikapärgi eramutele ja suurematele
+          ehitusobjektidele. Sarikapärg tähistab olulist hetke ehitusprotsessis
+          ning on traditsiooniline tänuavaldus ehitajatele tehtud töö eest.
+        </p>
+      </div>
+    </section>
+
+    <section class="seo-section">
+      <div class="seo-container">
+        <div class="seo-box">
+          <h2>Sarikapärg eramule ja kortermajale</h2>
+          <p>
+            Sarikapärg sobib nii eramu, kortermaja kui ka suurema ehitusobjekti
+            sarikapeoks. Pärg kinnitatakse tavaliselt hoone kõige nähtavamasse
+            kohta, et tähistada olulise ehitusetapi valmimist.
+          </p>
+        </div>
+
+        <div class="seo-box">
+          <h2>Sarikapärg ehitusettevõtetele</h2>
+          <p>
+            Lisaks eramutele tellitakse sarikapärgi ka arendustele, ärihoonetele
+            ja suurematele ehitusobjektidele. Sarikapärg on jätkuvalt levinud
+            osa ehitustraditsioonist nii väiksematel kui ka suurematel
+            objektidel.
+          </p>
+        </div>
+
+        <div class="seo-box">
+          <h2>Kiire tellimine ja kohaletoimetamine</h2>
+          <p>
+            Valmistame sarikapärgi Tallinnasse ja Harjumaale ning toome need
+            kokkulepitud ajal objektile kohale. Tellimisel piisab, kui annate
+            teada objekti aadressi ja soovitud tarneaja.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hello">
+      <div class="hello-row">
+        <div class="hello-text">
+          <h2>Esinduslikkus igas detailis</h2>
+
+          <p>
+            Sarikapärja valmistamisel pöörame tähelepanu ka tehnilistele
+            detailidele. Kuuseoksad punutakse tugevale metallrõngale, mis aitab
+            hoida pärja kuju ning annab sellele ühtlase väljanägemise.
+          </p>
+
+          <p>
+            Kuuseoksad kinnitatakse nii pärja esiküljele kui ka tagaküljele.
+            Tänu sellele jääb pärg täidlane ja korrektne igast vaatenurgast ning
+            mõjub hästi nii katusel, tellingutel kui ka mujal ehitusobjektil. Ka
+            pärja tagumine külg on kaetud kuuseokstega, et üldmulje oleks
+            visuaalselt kena ja tasakaalukas sõltumata sellest, millisest
+            suunast pärga vaadatakse.
+          </p>
+        </div>
+
+        <div class="hello-image">
+          <img
+            src="/images/Sarikaparg-Tallinn-Hello2.webp"
+            alt="Sarikapärg katusel"
+          />
+        </div>
+      </div>
+
+      <div class="hello-row hello-reverse">
+        <div class="hello-text">
+          <h2>Hind ja tellimine</h2>
+
+          <p>
+            <strong>Sarikapärja läbimõõt: 80 cm</strong><br />
+            <strong>Hind: 65 €</strong>
+          </p>
+
+          <p>
+            Tallinnas ja Harjumaal on kohaletoimetamine tasuta. Tellimiseks
+            helistage või saatke päring ning lepime kokku sobiva kuupäeva,
+            kellaaja ja tarnekoha.
+          </p>
+        </div>
+
+        <div class="hello-image">
+          <img
+            src="/images/Sarikaparg-Tallinn-Hello1.webp"
+            alt="Sarikapärg läbimõõduga 80 cm"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="info-details">
+      <details>
+        <summary>Sarikapärja hind ja mõõt</summary>
+
+        <div class="details-content">
+          <p>Florist Jakobsoni valmistatav sarikapärg on läbimõõduga 80 cm.</p>
+
+          <p>Sarikapärja hind on 65 €.</p>
+
+          <p>
+            Pärg sobib hästi sarikapeoks eramule, kortermajale, ärihoonele või
+            suuremale ehitusobjektile.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Kohaletoimetamine Tallinnas ja Harjumaal</summary>
+
+        <div class="details-content">
+          <p>
+            Toome sarikapärja Tallinnas ja Harjumaal tasuta kohale kokkulepitud
+            ajal.
+          </p>
+
+          <p>
+            Tellimisel on oluline märkida täpne tarneaadress, soovitud kuupäev
+            ja kellaaeg.
+          </p>
+
+          <p>
+            Vajadusel täpsustame telefoni teel, kuhu pärg objektil üle anda.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Millal sarikapärg tellida?</summary>
+
+        <div class="details-content">
+          <p>Soovitame sarikapärja tellida vähemalt 2–3 päeva ette.</p>
+
+          <p>
+            Kiiremate tellimuste puhul võib samuti ühendust võtta — võimalusel
+            leiame lahenduse ka lühema etteteatamisega.
+          </p>
+
+          <p>Tellida saab telefoni või e-posti teel.</p>
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-container">
+          <div class="footer-contact-row">
+            <a href="tel:+37253423572">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M6.6 10.8c1.8 3.5 4.7 6.3 8.2 8.2l2.7-2.7c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V22c0 .6-.4 1-1 1C10.3 23 1 13.7 1 2c0-.6.4-1 1-1h4.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.9z"
+                />
+              </svg>
+              +372 5342 3572
+            </a>
+
+            <a href="mailto:floristjakobson@gmail.com">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                />
+              </svg>
+              floristjakobson@gmail.com
+            </a>
+
+            <span>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                />
+              </svg>
+              Tallinn • Harjumaa
+            </span>
+
+            <span>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1zm1 11.4V6h-2v7l5.2 3.1 1-1.7z"
+                />
+              </svg>
+              Klienditeenindus E–R 9–18
+            </span>
+          </div>
+
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/floristjakobson"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M13 22v-9h3l1-4h-4V7c0-1.2.3-2 2-2h2V1.5c-.4-.1-1.8-.5-3.5-.5C10.5 1 9 2.8 9 6v3H6v4h3v9h4z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@floristjakobson"
+              target="_blank"
+              aria-label="YouTube"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.3-1C17.2 2.5 12 2.5 12 2.5s-5.2 0-8.3.4c-.4.1-1.4.1-2.3 1C.7 4.6.5 6.2.5 6.2S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.6.9 2.3c.9.9 2.1.9 2.6 1 1.9.2 8 .4 8 .4s5.2 0 8.3-.4c.4-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3S24 13.9 24 12v-2c0-1.9-.5-3.8-.5-3.8zM9.5 14.5v-5l5 2.5-5 2.5z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            © 2026 Floristjakobson. Kõik õigused kaitstud.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const bigSlides = document.querySelectorAll(".big-slide");
+      let bigCurrent = 0;
+
+      if (bigSlides.length > 0) {
+        setInterval(() => {
+          bigSlides[bigCurrent].classList.remove("big-slide-active");
+          bigCurrent = (bigCurrent + 1) % bigSlides.length;
+          bigSlides[bigCurrent].classList.add("big-slide-active");
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
