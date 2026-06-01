@@ -95,30 +95,73 @@ nav a:hover {
   opacity: 0.6;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #111;
+  line-height: 1;
+}
+
 /* SIIT ALGAB MOBIILI VAADE */
+
 @media (max-width: 700px) {
   nav {
-    padding: 0.8em 1em;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  nav ul {
-    position: static;
-    transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
+    padding: 0.9em 1em;
   }
 
   .logo-link img {
-    height: 36px;
+    height: 32px;
+    width: auto;
+    display: block;
   }
 
-  nav a {
-    font-size: 0.9rem;
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+
+    flex-direction: column;
+    gap: 0;
+
+    padding: 15px 0;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transform: none;
+    box-sizing: border-box;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu a {
+    display: block;
+    padding: 14px;
+    font-size: 1rem;
   }
 }
+
 /* SIIN LÕPEB MOBIILI VAADE */
 
 /* HERO SLIDER */
