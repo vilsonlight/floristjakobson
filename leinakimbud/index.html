@@ -105,25 +105,21 @@
 
   <body>
     <nav>
-      <ul>
-        <li>
-          <a href="/" class="logo-link">
-            <img
-              src="/images/logo23.webp"
-              alt="Florist Jakobson logo"
-              width="25"
-              height="25"
-            />
-          </a>
-        </li>
+      <a href="/" class="logo-link">
+        <img
+          src="/images/logo23.webp"
+          alt="Florist Jakobson logo"
+          width="25"
+          height="25"
+        />
+      </a>
 
-        <li>
-          <a href="/matuseparjad/">Matusepärjad</a>
-        </li>
+      <button class="menu-toggle" type="button" aria-label="Menüü">☰</button>
 
-        <li>
-          <a href="/leinakimbud/">Leinakimbud</a>
-        </li>
+      <ul class="nav-menu">
+        <li><a href="/matuseparjad/">Matusepärjad</a></li>
+        <li><a href="/leinakimbud/">Leinakimbud</a></li>
+        <li><a href="/sarikaparjad/">Sarikapärjad</a></li>
       </ul>
     </nav>
 
@@ -1086,6 +1082,17 @@
 
           message.scrollIntoView({ behavior: "smooth" });
         }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuToggle.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+        });
       });
     </script>
   </body>
