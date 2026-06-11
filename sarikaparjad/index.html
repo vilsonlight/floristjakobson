@@ -242,11 +242,10 @@
             <strong>Sarikapärjade läbimõõt: 80 cm</strong><br />
             <strong>Hind: 65 €</strong>
           </p>
-
           <p>
-            Tallinnas ja Harjumaal on kohaletoimetamine tasuta. Tellimiseks
-            helistage või saatke päring ning lepime kokku sobiva kuupäeva,
-            kellaaja ja tarnekoha.
+            Tallinnas ja Harjumaal on kohaletoimetamine tasuta. Tellimuse
+            esitamiseks täitke allolev vorm. Võtame teiega tööajal ühendust kuni
+            1,5 tunni jooksul, et tellimus kinnitada.
           </p>
         </div>
 
@@ -258,6 +257,79 @@
         </div>
       </div>
     </section>
+
+    <section class="order-form" id="orderForm">
+      <h2>Sarikapärja tellimine</h2>
+
+      <form action="https://formspree.io/f/xkopbzkl" method="POST">
+        <label for="name">1. Tellija nimi</label>
+        <input type="text" id="name" name="nimi" required />
+
+        <label for="phone">2. Tellija telefoni number</label>
+        <input type="tel" id="phone" name="telefon" required />
+
+        <label for="email">3. Tellija e-mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="product">4. Toode</label>
+        <input
+          type="text"
+          id="product"
+          name="toode"
+          value="Sarikapärg Ø80 cm – 65 €"
+          readonly
+        />
+
+        <label for="address">5. Tarneaadress</label>
+        <textarea
+          id="address"
+          name="tarne_aadress"
+          rows="3"
+          placeholder="Näiteks: Pärnu mnt 123, Tallinn"
+          required
+        ></textarea>
+
+        <label for="date">6. Tarne kuupäev</label>
+        <input type="date" id="date" name="tarne_kuupaev" required />
+
+        <label for="time">7. Soovitud tarneaeg</label>
+        <input type="time" id="time" name="tarne_aeg" required />
+
+        <label>8. Tasumise viis</label>
+
+        <div class="payment-options">
+          <label>
+            <input type="radio" name="tasumine" value="Ülekandega" required />
+            Ülekandega
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="tasumine"
+              value="Kauba kättesaamisel sularahas"
+            />
+            Kauba kättesaamisel sularahas
+          </label>
+
+          <p>
+            <strong>Kohaletoimetamine:</strong>
+            Sarikapärja kohaletoimetamine Tallinnas ja Harjumaal on tasuta.
+          </p>
+        </div>
+
+        <label for="notes">9. Märkused</label>
+        <textarea id="notes" name="markused" rows="4"></textarea>
+
+        <button type="submit">Saada sarikapärja tellimus</button>
+
+        <p id="formMessage" class="success-message">
+          ✔ Aitäh! Oleme teie sarikapärja tellimuse kätte saanud. Võtame teiega
+          tööajal ühendust kuni 1 tunni jooksul, et tellimus kinnitada.
+        </p>
+      </form>
+    </section>
+    ```
 
     <section class="info-details">
       <details>
