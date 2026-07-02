@@ -236,10 +236,10 @@
 
         <div class="product-box">
           <img
-            src="/images/Beethoven.webp"
+            src="/images/Matuseparjad-kulleriga-Beethoven.webp"
             alt="Premiumpärg hortensiatest Tallinnasse"
-            width="480"
-            height="720"
+            width="800"
+            height="1200"
             loading="lazy"
             decoding="async"
           />
@@ -256,10 +256,10 @@
 
         <div class="product-box">
           <img
-            src="/images/vivaldi.webp"
+            src="/images/Matuseparjad-kulleriga-Vivaldi.webp"
             alt="Matusepärg kuldsete roosidega"
-            width="480"
-            height="720"
+            width="800"
+            height="1200"
             loading="lazy"
             decoding="async"
           />
@@ -276,10 +276,10 @@
 
         <div class="product-box">
           <img
-            src="/images/Mozart.webp"
+            src="/images/Matuseparjad-kulleriga-Mozart.webp"
             alt="Matusepärg roosidest ja liiliatest"
-            width="480"
-            height="720"
+            width="800"
+            height="1200"
             loading="lazy"
             decoding="async"
           />
@@ -576,7 +576,7 @@
 
         <div class="product-box">
           <img
-            src="/images/Matusepad-Tallinnas-Tarazed.webp"
+            src="/images/Matuseparjad-Tallinnas-Tarazed.webp"
             alt="Matusepärg kalladest ja roosidest"
             width="480"
             height="720"
@@ -756,7 +756,7 @@
 
         <div class="product-box">
           <img
-            src="/images/Matuseparjad -Tallinnas-Rigel.webp"
+            src="/images/Matuseparjad-Tallinnas-Rigel.webp"
             alt="Matusepärg gerberatega"
             width="480"
             height="720"
@@ -1497,54 +1497,6 @@
           message.scrollIntoView({ behavior: "smooth" });
         }
       });
-    </script>
-
-    <script>
-      const galleryTrack = document.querySelector(".gallery-track");
-      const galleryImages = document.querySelectorAll(".gallery-track img");
-      const prevBtn = document.querySelector(".gallery-prev");
-      const nextBtn = document.querySelector(".gallery-next");
-
-      let galleryIndex = 0;
-
-      function getVisibleCount() {
-        if (window.innerWidth <= 560) return 1;
-        if (window.innerWidth <= 900) return 2;
-        return 4;
-      }
-
-      function updateGallery() {
-        const visibleCount = getVisibleCount();
-        const maxIndex = Math.max(galleryImages.length - visibleCount, 0);
-
-        if (galleryIndex > maxIndex) galleryIndex = maxIndex;
-        if (galleryIndex < 0) galleryIndex = 0;
-
-        const imageWidth = galleryImages[0].offsetWidth;
-        const gap = parseInt(getComputedStyle(galleryTrack).gap) || 0;
-        const moveAmount = galleryIndex * (imageWidth + gap);
-
-        galleryTrack.style.transform = `translateX(-${moveAmount}px)`;
-      }
-
-      nextBtn.addEventListener("click", () => {
-        const visibleCount = getVisibleCount();
-        const maxIndex = Math.max(galleryImages.length - visibleCount, 0);
-
-        galleryIndex = galleryIndex >= maxIndex ? 0 : galleryIndex + 1;
-        updateGallery();
-      });
-
-      prevBtn.addEventListener("click", () => {
-        const visibleCount = getVisibleCount();
-        const maxIndex = Math.max(galleryImages.length - visibleCount, 0);
-
-        galleryIndex = galleryIndex <= 0 ? maxIndex : galleryIndex - 1;
-        updateGallery();
-      });
-
-      window.addEventListener("resize", updateGallery);
-      window.addEventListener("load", updateGallery);
     </script>
 
     <script>
