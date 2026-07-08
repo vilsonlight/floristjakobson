@@ -509,27 +509,41 @@ section {
 
 /* KLIENTIDE KOMMENTAARID */
 
+/* KLIENTIDE KOMMENTAARID */
+
 .reviews-section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #fafafa;
+  background-color: white;
+  overflow: hidden;
 }
 
 .reviews-section h2 {
   margin-bottom: 40px;
 }
 
+.reviews-slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 12px 0;
+}
+
 .reviews-container {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: max-content;
+  animation: reviewsScroll 45s linear infinite;
+}
+
+.reviews-slider:hover .reviews-container {
+  animation-play-state: paused;
 }
 
 .review-box {
   background: white;
   padding: 20px;
-  max-width: 300px;
+  width: 300px;
+  flex-shrink: 0;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -546,6 +560,16 @@ section {
 .review-stars {
   color: #f5b301;
   margin-top: 5px;
+}
+
+@keyframes reviewsScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* HELLO SECTION */
