@@ -1012,3 +1012,64 @@ section {
     right: 10px;
   }
 }
+
+/* UUS LILL VIDEO HERO - test */
+
+.uul-video-hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.uul-video-hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.uul-video-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.uul-video-hero__content {
+  position: absolute;
+  left: 8%;
+  bottom: 18%;
+  max-width: 650px;
+  color: white;
+  z-index: 2;
+}
+
+.uul-video-hero__content h1 {
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow:
+    2px 2px 8px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.uul-video-hero__content p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .uul-video-hero {
+    height: 65vh;
+    min-height: 360px;
+  }
+
+  .uul-video-hero__content {
+    left: 6%;
+    right: 6%;
+    bottom: 14%;
+  }
+}
