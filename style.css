@@ -262,7 +262,6 @@ section {
   min-width: 250px;
   background: var(--box-color);
   padding: 20px;
-  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -293,7 +292,6 @@ section {
 
 .toode-box {
   background: #ffffff;
-  border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -365,7 +363,6 @@ section {
 .product-box {
   background: #f5f5f5;
   padding: 15px;
-  border-radius: 8px;
   text-align: center;
   overflow: hidden;
 }
@@ -373,7 +370,6 @@ section {
 .product-box img {
   width: 100%;
   height: auto;
-  border-radius: 6px;
   transition: transform 0.3s ease;
 }
 
@@ -410,7 +406,6 @@ section {
 
   text-decoration: none;
   font-weight: 700;
-  border-radius: 0.5em;
 
   backdrop-filter: blur(6px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -454,7 +449,6 @@ section {
 .order-form textarea,
 .order-form select {
   padding: 10px;
-  border-radius: 6px;
   border: 1px solid #ccc;
   font-size: 16px;
 }
@@ -466,7 +460,6 @@ section {
   background: black;
   color: white;
   font-size: 16px;
-  border-radius: 6px;
   cursor: pointer;
 }
 
@@ -499,7 +492,6 @@ section {
   padding: 12px;
   background-color: #e6f4ea;
   color: #1a7f37;
-  border-radius: 6px;
   font-weight: 600;
 }
 
@@ -545,7 +537,6 @@ section {
   padding: 20px;
   width: 300px;
   flex-shrink: 0;
-  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -622,7 +613,6 @@ section {
   aspect-ratio: 3 / 2;
   object-fit: cover;
   display: block;
-  border-radius: 28px;
   box-shadow: 0 22px 55px rgba(0, 0, 0, 0.12);
 }
 
@@ -647,7 +637,6 @@ section {
   }
 
   .hello-image img {
-    border-radius: 20px;
   }
 }
 
@@ -786,6 +775,7 @@ section {
   padding: 0 20px;
   border: 1px solid rgba(120, 90, 60, 0.08);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.045);
+  border-radius: 0;
 }
 
 .info-details summary {
@@ -843,7 +833,6 @@ section {
 
   .info-details details {
     padding: 0 16px;
-    border-radius: 12px;
   }
 
   .info-details summary {
@@ -867,7 +856,6 @@ section {
   padding: 35px 45px;
 
   background: #fff;
-  border-radius: 18px;
 
   box-shadow:
     0 4px 15px rgba(0, 0, 0, 0.04),
@@ -938,7 +926,6 @@ section {
   object-fit: cover;
   flex-shrink: 0;
 
-  border-radius: 16px;
   display: block;
 
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.11);
@@ -949,7 +936,6 @@ section {
   height: 46px;
 
   border: none;
-  border-radius: 50%;
 
   background: #222;
   color: #fff;
