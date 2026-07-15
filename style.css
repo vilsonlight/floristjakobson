@@ -1109,3 +1109,18 @@ section {
     bottom: 14%;
   }
 }
+
+.tooted-heading {
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.tooted-heading h2 {
+  margin-bottom: 1rem;
+}
+
+.tooted-heading p {
+  line-height: 1.8;
+  color: #555;
+}
