@@ -676,6 +676,38 @@ section {
   }
 }
 
+/* HELLO SCROLL ANIMATION */
+
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hello-image img {
+  transform: scale(1.04);
+  transition: transform 1.3s ease;
+}
+
+.hello-image.reveal-active img {
+  transform: scale(1);
+}
+
 /* GALERII */
 
 .mini-gallery {

@@ -441,9 +441,11 @@
       </div>
     </section>
 
+
+
     <section class="hello">
       <div class="hello-row">
-        <div class="hello-text">
+        <div class="hello-text reveal-left">
           <h2>Kogemus leinatöödes alates 1995. aastast</h2>
           <p>
             Florist Jakobson tähendab pikaajalist kogemust ja spetsialiseerumist
@@ -453,7 +455,8 @@
           </p>
         </div>
 
-        <div class="hello-image">
+        
+        <div class="hello-image reveal-right">
           <img
             src="/images/floristjakobson9.webp"
             alt="Elegantne matusepärg täislilledest"
@@ -461,8 +464,11 @@
         </div>
       </div>
 
+
       <div class="hello-row hello-reverse">
-        <div class="hello-text">
+
+
+        <div class="hello-text reveal-right">
           <h2>Leinatööd ametlikele ja isiklikele ärasaatmistele</h2>
           <p>
             Meie leinatöid tellivad nii ettevõtted, organisatsioonid kui ka
@@ -472,7 +478,7 @@
           </p>
         </div>
 
-        <div class="hello-image">
+         <div class="hello-image reveal-left">
           <img
             src="/images/floristjakobson10.webp"
             alt="Leinakimp Tallinnas ja Harjumaal"
@@ -481,7 +487,9 @@
       </div>
 
       <div class="hello-row">
-        <div class="hello-text">
+
+        <div class="hello-text reveal-left">
+
           <h2>Aitame valida sobiva leinaseade või pärja</h2>
           <p>
             Kui ei ole kindel, milline pärg või kimp sobib, aitame valida.
@@ -489,8 +497,9 @@
             tunnet soovite lilledega edasi anda.
           </p>
         </div>
+          
+        <div class="hello-image reveal-right">
 
-        <div class="hello-image">
           <img
             src="/images/floristjakobson12.webp"
             alt="Matusepärg kulleriga tseremooniale"
@@ -498,8 +507,13 @@
         </div>
       </div>
 
+
       <div class="hello-row hello-reverse">
-        <div class="hello-text">
+
+       
+
+<div class="hello-text reveal-right">
+
           <h2>Eritellimused</h2>
           <p>
             Meile meeldivad loomingulised väljakutsed. Soovi korral valmistame
@@ -508,8 +522,10 @@
             värvidest inspireeritud stiilis.
           </p>
         </div>
+ 
 
-        <div class="hello-image">
+          <div class="hello-image reveal-left">
+
           <img
             src="/images/floristjakobson98.webp"
             alt="Leinakimp Tallinnas ja Harjumaal"
@@ -517,8 +533,12 @@
         </div>
       </div>
 
+
+
       <div class="hello-row">
-        <div class="hello-text">
+
+        <div class="hello-text reveal-left">
+
           <h2>Lint tekstiga</h2>
           <p>
             Leinalindil olev tekst on oluline osa viimase austusavalduse
@@ -529,7 +549,9 @@
           </p>
         </div>
 
-        <div class="hello-image">
+
+         <div class="hello-image reveal-right">
+        
           <img
             src="/images/Floristjakobson-lint.webp"
             alt="Matusepärg kulleriga tseremooniale"
@@ -538,7 +560,10 @@
       </div>
 
       <div class="hello-row hello-reverse">
-        <div class="hello-text">
+    
+       <div class="hello-text reveal-right">
+
+
           <h2>Merepärjad</h2>
           <p>
             Traditsioonid viimsel ärasaatmisel on erinevad. Üheks võimaluseks on
@@ -548,13 +573,16 @@
           </p>
         </div>
 
-        <div class="hello-image">
+        <div class="hello-image reveal-left">
+
           <img src="/images/Mereparg.webp" alt="Merepärg" />
         </div>
       </div>
 
       <div class="hello-row">
-        <div class="hello-text">
+
+        <div class="hello-text reveal-left">
+
           <h2>Sarikapärg</h2>
           <p>
             Sarikapärg tähistab olulist hetke ehitusprotsessis – aega, mil hoone
@@ -571,10 +599,14 @@
           </p>
         </div>
 
-        <div class="hello-image">
+        <div class="hello-image reveal-right">
+
+
           <img src="/images/Sarikaparg.webp" alt="Sarikapärg kulleriga" />
         </div>
       </div>
+
+      
     </section>
 
     <section class="info-details">
@@ -872,5 +904,32 @@
         });
       });
     </script>
+
+      <script>
+  const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-active");
+        }
+      });
+    },
+    {
+      threshold: 0.25,
+    }
+  );
+
+  reveals.forEach((item) => observer.observe(item));
+</script>
+
+
+
+
+
+
+
+
   </body>
 </html>
