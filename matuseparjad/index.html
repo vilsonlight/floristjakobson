@@ -1245,8 +1245,17 @@
         <label for="date">8. Tarne kuupäev</label>
         <input type="date" id="date" name="tarne_kuupaev" required />
 
-        <label for="time">9. Tarne kellaaeg</label>
-        <input type="time" id="time" name="uleandmise_aeg" required />
+       <label for="time">9. Tarne ajavahemik</label>
+<select id="time" name="uleandmise_aeg" required>
+  <option value="">Vali tarne ajavahemik</option>
+  <option value="9.00–11.00">9.00–11.00</option>
+  <option value="11.00–13.00">11.00–13.00</option>
+  <option value="13.00–15.00">13.00–15.00</option>
+  <option value="15.00–17.00">15.00–17.00</option>
+  <option value="17.00–19.00">17.00–19.00</option>
+</select>
+
+<p class="form-note">Täpsem kellaaeg lepitakse kokku hiljem.</p>
 
         <label>10. Tasumise viis</label>
 
