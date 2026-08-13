@@ -149,7 +149,15 @@
     </nav>
 
     <header class="uul-video-hero">
-      <video class="uul-video-hero__video" autoplay muted loop playsinline>
+      <video
+        class="uul-video-hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="/images/floristjakobson-hero.webp"
+      >
         <source src="/images/floristjakobson-video-2.mp4" type="video/mp4" />
       </video>
 
@@ -286,7 +294,12 @@
               loading="lazy"
               decoding="async"
             />
-            <img src="/images/tehtud-tood9.webp" alt="Matusepärg roosidest" />
+            <img
+              src="/images/tehtud-tood9.webp"
+              alt="Matusepärg roosidest"
+              loading="lazy"
+              decoding="async"
+            />
             <img
               src="/images/tehtud-tood8.webp"
               alt="Matusepärg kallade ja roosidega"
@@ -848,21 +861,6 @@
       </div>
     </footer>
 
-    <script>
-      const bigSlides = document.querySelectorAll(".big-slide");
-
-      let bigCurrent = 0;
-
-      if (bigSlides.length > 0) {
-        setInterval(() => {
-          bigSlides[bigCurrent].classList.remove("big-slide-active");
-
-          bigCurrent = (bigCurrent + 1) % bigSlides.length;
-
-          bigSlides[bigCurrent].classList.add("big-slide-active");
-        }, 5000);
-      }
-    </script>
     <script>
       const track = document.querySelector(".gallery-track");
       const images = document.querySelectorAll(".gallery-track img");
