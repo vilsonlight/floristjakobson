@@ -12,27 +12,23 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-86YB931M4L");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Blogi – mõtteid leinast ja lootusest | Florist Jakobson</title>
-
     <meta
       name="description"
       content="Florist Jakobsoni blogi leinast, lootusest, lilledest ja väärikast hüvastijätust. Mõtted ja nõuanded enam kui 30-aastase floristikakogemuse põhjal."
     />
-
     <link rel="canonical" href="https://floristjakobson.ee/blogi/" />
     <meta name="robots" content="index, follow" />
 
     <link rel="stylesheet" href="/style.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap"
       rel="stylesheet"
@@ -42,12 +38,10 @@
       property="og:title"
       content="Blogi – mõtteid leinast ja lootusest | Florist Jakobson"
     />
-
     <meta
       property="og:description"
       content="Mõtted leinast, lootusest, lilledest ja väärikast hüvastijätust enam kui 30-aastase floristikakogemuse põhjal."
     />
-
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="et_EE" />
     <meta property="og:site_name" content="Florist Jakobson" />
@@ -109,6 +103,173 @@
         }
       }
     </script>
+
+    <!-- Blogi avalehe erikujundus -->
+    <style>
+      .blog-container {
+        width: min(1120px, calc(100% - 40px));
+        margin-inline: auto;
+      }
+
+      .blog-header {
+        padding: clamp(72px, 10vw, 130px) 0;
+        color: #ffffff;
+        text-align: center;
+        background:
+          linear-gradient(rgba(13, 25, 34, 0.72), rgba(13, 25, 34, 0.82)),
+          url("/images/Matuseparjad-Tallinnas-Lein3.webp") center 42% / cover
+            no-repeat;
+      }
+
+      .blog-label {
+        margin: 0 0 14px;
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .blog-header h1 {
+        max-width: 850px;
+        margin: 0 auto 20px;
+        color: #ffffff;
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.3rem, 6vw, 4.7rem);
+        font-weight: 500;
+        line-height: 1.08;
+      }
+
+      .blog-header p:last-child {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: clamp(1rem, 2vw, 1.18rem);
+        line-height: 1.75;
+      }
+
+      .blog-posts {
+        padding: clamp(60px, 8vw, 100px) 0;
+        background: #f5f3ef;
+      }
+
+      .blog-posts h2 {
+        margin: 0 0 38px;
+        color: #26352f;
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(24px, 4vw, 44px);
+        align-items: stretch;
+      }
+
+      .blog-card {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 12px 34px rgba(25, 39, 33, 0.1);
+      }
+
+      .blog-card > a {
+        display: block;
+        overflow: hidden;
+      }
+
+      .blog-card img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        transition: transform 0.45s ease;
+      }
+
+      .blog-card:hover img {
+        transform: scale(1.025);
+      }
+
+      .blog-card-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        padding: clamp(24px, 4vw, 38px);
+      }
+
+      .blog-card-category {
+        margin: 0 0 12px;
+        color: #6e7d73;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .blog-card h3 {
+        margin: 0 0 16px;
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.55rem, 3vw, 2.15rem);
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .blog-card h3 a {
+        color: #26352f;
+        text-decoration: none;
+      }
+
+      .blog-card h3 a:hover {
+        color: #66776c;
+      }
+
+      .blog-card-content > p:not(.blog-card-category) {
+        margin: 0 0 24px;
+        color: #4b554f;
+        line-height: 1.7;
+      }
+
+      .blog-read-more {
+        align-self: flex-start;
+        margin-top: auto;
+        padding-bottom: 4px;
+        color: #26352f;
+        font-weight: 700;
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+      }
+
+      .blog-read-more:hover {
+        color: #66776c;
+      }
+
+      @media (max-width: 760px) {
+        .blog-container {
+          width: min(100% - 28px, 620px);
+        }
+
+        .blog-header {
+          padding: 68px 0;
+        }
+
+        .blog-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .blog-card-content {
+          padding: 24px 22px 28px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .blog-card img {
+          transition: none;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -128,18 +289,15 @@
         <li><a href="/matuseparjad/">Matusepärjad</a></li>
         <li><a href="/leinakimbud/">Leinakimbud</a></li>
         <li><a href="/sarikaparjad/">Sarikapärjad</a></li>
-        <li>
-          <a href="/blogi/" aria-current="page">Blogi</a>
-        </li>
+        <li><a href="/blogi/" aria-current="page">Blogi</a></li>
       </ul>
     </nav>
+
     <main>
       <header class="blog-header">
         <div class="blog-container">
           <p class="blog-label">Florist Jakobsoni blogi</p>
-
           <h1>Mõtteid leinast ja lootusest</h1>
-
           <p>
             Kirjutame lilledest, leinast, lootusest ja väärikast hüvastijätust
             enam kui 30-aastase floristikakogemuse põhjal.
@@ -151,8 +309,73 @@
         <div class="blog-container">
           <h2 id="blog-posts-title">Uusimad kirjutised</h2>
 
-          <div class="blog-grid" id="blogPosts">
-            <!-- Blogipostitused hakkavad tulema siia -->
+          <div class="blog-grid">
+            <article class="blog-card">
+              <a
+                href="/blogi/millised-lilleseaded-sobivad-erinevatele-matusetalitustele/"
+              >
+                <img
+                  src="/images/matuse-kombed.png"
+                  alt="Täislilledest matusepärg kirstumatuse ärasaatmistseremoonial"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+
+              <div class="blog-card-content">
+                <p class="blog-card-category">Matusetraditsioonid</p>
+                <h3>
+                  <a
+                    href="/blogi/millised-lilleseaded-sobivad-erinevatele-matusetalitustele/"
+                  >
+                    Millised lilleseaded sobivad erinevatele matusetalitustele?
+                  </a>
+                </h3>
+                <p>
+                  Matusekombed on aja jooksul muutunud ning alati ei pruugi olla
+                  selge, kas valida matusepärg, leinakimp või kuuseokstega pärg.
+                  Vaatame, milline lilleseade sobib erinevate ärasaatmiste
+                  juurde.
+                </p>
+                <a
+                  class="blog-read-more"
+                  href="/blogi/millised-lilleseaded-sobivad-erinevatele-matusetalitustele/"
+                >
+                  Loe edasi
+                </a>
+              </div>
+            </article>
+
+            <article class="blog-card">
+              <a href="/blogi/mida-oelda-kui-sonu-ei-ole/">
+                <img
+                  src="/images/Matuseparjad-Tallinnas-Lein3.webp"
+                  alt="Lilled leina ja kaastunde väljendamiseks"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+
+              <div class="blog-card-content">
+                <p class="blog-card-category">Lein ja kaastunne</p>
+                <h3>
+                  <a href="/blogi/mida-oelda-kui-sonu-ei-ole/">
+                    Mida öelda, kui sõnu ei ole?
+                  </a>
+                </h3>
+                <p>
+                  Leinava inimese kõrval olles võib olla raske õigeid sõnu
+                  leida. Mõnikord ei olegi vaja palju rääkida – siiras kohalolu
+                  ja lihtne kaastundeavaldus võivad öelda kõige olulisema.
+                </p>
+                <a
+                  class="blog-read-more"
+                  href="/blogi/mida-oelda-kui-sonu-ei-ole/"
+                >
+                  Loe edasi
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -163,7 +386,7 @@
         <div class="footer-container">
           <div class="footer-contact-row">
             <a href="tel:+37253423572">
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M6.6 10.8c1.8 3.5 4.7 6.3 8.2 8.2l2.7-2.7c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V22c0 .6-.4 1-1 1C10.3 23 1 13.7 1 2c0-.6.4-1 1-1h4.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.9z"
                 />
@@ -172,7 +395,7 @@
             </a>
 
             <a href="mailto:floristjakobson@gmail.com">
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
                 />
@@ -181,7 +404,7 @@
             </a>
 
             <span>
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
                 />
@@ -190,7 +413,7 @@
             </span>
 
             <span>
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12 1a11 11 0 1 0 11 11A11 11 0 0 0 12 1zm1 11.4V6h-2v7l5.2 3.1 1-1.7z"
                 />
@@ -203,9 +426,10 @@
             <a
               href="https://www.facebook.com/floristjakobson"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M13 22v-9h3l1-4h-4V7c0-1.2.3-2 2-2h2V1.5c-.4-.1-1.8-.5-3.5-.5C10.5 1 9 2.8 9 6v3H6v4h3v9h4z"
                 />
@@ -215,9 +439,10 @@
             <a
               href="https://www.youtube.com/@floristjakobson"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="YouTube"
             >
-              <svg viewBox="0 0 24 24">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.3-1C17.2 2.5 12 2.5 12 2.5s-5.2 0-8.3.4c-.4.1-1.4.1-2.3 1C.7 4.6.5 6.2.5 6.2S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.6.9 2.3c.9.9 2.1.9 2.6 1 1.9.2 8 .4 8 .4s5.2 0 8.3-.4c.4-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3S24 13.9 24 12v-2c0-1.9-.5-3.8-.5-3.8zM9.5 14.5v-5l5 2.5-5 2.5z"
                 />
@@ -226,7 +451,7 @@
           </div>
 
           <div class="footer-bottom">
-            © 2026 Floristjakobson. Kõik õigused kaitstud.
+            © 2026 Florist Jakobson. Kõik õigused kaitstud.
           </div>
         </div>
       </div>
@@ -237,9 +462,11 @@
         const menuToggle = document.querySelector(".menu-toggle");
         const navMenu = document.querySelector(".nav-menu");
 
-        menuToggle.addEventListener("click", function () {
-          navMenu.classList.toggle("active");
-        });
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+          });
+        }
       });
     </script>
   </body>
