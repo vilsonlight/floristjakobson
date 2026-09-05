@@ -1326,3 +1326,21 @@ section {
     gap: 45px;
   }
 }
+
+/* Aadressiotsingu valikud */
+
+#aadressiValikud {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#aadressiValikud li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#aadressiValikud li:hover {
+  background-color: #f2f2f2;
+}

@@ -1315,9 +1315,12 @@
           id="address"
           name="tarne_aadress"
           rows="3"
-          placeholder="Näiteks: Rahumäe tee 12, Tallinn"
+          placeholder="Alusta aadressi kirjutamist"
+          autocomplete="off"
           required
         ></textarea>
+
+        <ul id="aadressiValikud"></ul>
 
         <label for="date">8. Tarne kuupäev</label>
         <input type="date" id="date" name="tarne_kuupaev" required />
@@ -1613,6 +1616,44 @@
 
         menuToggle.addEventListener("click", function () {
           navMenu.classList.toggle("active");
+        });
+      });
+    </script>
+    <script>
+      const aadressInput = document.getElementById("address");
+
+      const aadressiValikud = document.getElementById("aadressiValikud");
+
+      aadressInput.addEventListener("input", async function () {
+        const otsing = aadressInput.value.trim();
+
+        if (otsing.length < 3) {
+          aadressiValikud.innerHTML = "";
+          return;
+        }
+
+        const apiAadress =
+          "https://inaadress.maaamet.ee/inaadress/gazetteer" +
+          "?address=" +
+          encodeURIComponent(otsing) +
+          "&results=5&appartment=1";
+
+        const vastus = await fetch(apiAadress);
+        const andmed = await vastus.json();
+
+        aadressiValikud.innerHTML = "";
+
+        andmed.addresses.forEach(function (aadress) {
+          const valik = document.createElement("li");
+
+          valik.textContent = aadress.ipikkaadress;
+
+          valik.addEventListener("click", function () {
+            aadressInput.value = aadress.ipikkaadress;
+            aadressiValikud.innerHTML = "";
+          });
+
+          aadressiValikud.appendChild(valik);
         });
       });
     </script>
