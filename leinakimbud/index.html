@@ -834,6 +834,16 @@
         <label for="notes">10. Märkused</label>
         <textarea id="notes" name="markused" rows="3"></textarea>
 
+        <div class="order-summary" id="orderSummary" aria-live="polite">
+          <h3>Tellimuse kokkuvõte</h3>
+          <p id="parjaHind"></p>
+          <p>Lint tekstiga: 5 €</p>
+          <p>Kuller: 10 €</p>
+          <p><strong id="hindKokku"></strong></p>
+        </div>
+
+        <input type="hidden" id="hinnaKokkuvote" name="hinna_kokkuvote" />
+
         <button type="submit">Saada tellimus</button>
 
         <p id="formMessage" class="success-message">
@@ -1059,11 +1069,68 @@
       function selectProduct(productName) {
         const modelSelect = document.getElementById("model");
         modelSelect.value = productName;
+        modelSelect.dispatchEvent(new Event("change"));
 
         document.getElementById("orderForm").scrollIntoView({
           behavior: "smooth",
         });
       }
+    </script>
+
+    <script>
+      const mudel = document.getElementById("model");
+      const parjaHind = document.getElementById("parjaHind");
+      const hindKokku = document.getElementById("hindKokku");
+      const hinnaKokkuvote = document.getElementById("hinnaKokkuvote");
+
+      const mudeliteHinnad = {
+        LE1: 95,
+        LE2: 95,
+        LE3: 95,
+        LE4: 115,
+        LE5: 95,
+        LE6: 115,
+        LE7: 115,
+        LE8: 115,
+        LE9: 115,
+        LE10: 95,
+        LE11: 115,
+        LE12: 95,
+        Baham: 115,
+        Bunda: 115,
+        Maia: 115,
+        Manica: 125,
+        Atik: 115,
+        Heze: 115,
+        Tarf: 115,
+        Thabit: 115,
+        Nucatai: 125,
+        Labrum: 115,
+        Kerb: 115,
+        Nanto: 125,
+        Marfak: 115,
+      };
+
+      const lindiHind = 5;
+      const kulleriHind = 10;
+
+      function uuendaTellimuseKokkuvotet() {
+        const valitudMudel = mudel.value;
+        const valitudParjaHind = mudeliteHinnad[valitudMudel];
+        const koguHind = valitudParjaHind + lindiHind + kulleriHind;
+
+        parjaHind.textContent = `${valitudMudel}: ${valitudParjaHind} €`;
+        hindKokku.textContent = `Hind kokku: ${koguHind} €`;
+
+        hinnaKokkuvote.value =
+          `${valitudMudel}: ${valitudParjaHind} €; ` +
+          `lint tekstiga: ${lindiHind} €; ` +
+          `kuller: ${kulleriHind} €; ` +
+          `hind kokku: ${koguHind} €`;
+      }
+
+      mudel.addEventListener("change", uuendaTellimuseKokkuvotet);
+      uuendaTellimuseKokkuvotet();
     </script>
 
     <script>
@@ -1094,6 +1161,7 @@
             message.style.display = "block";
 
             form.reset();
+            uuendaTellimuseKokkuvotet();
 
             message.scrollIntoView({ behavior: "smooth" });
           } else {
