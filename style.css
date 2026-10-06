@@ -1344,3 +1344,44 @@ section {
 #aadressiValikud li:hover {
   background-color: #f2f2f2;
 }
+.call-button {
+  position: fixed;
+  right: 45px;
+  bottom: 45px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(15px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 4s ease,
+    filter 4s ease,
+    transform 4s ease;
+}
+
+.call-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.call-button.call-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+  .call-button {
+    right: 20px;
+    bottom: 20px;
+  }
+}
