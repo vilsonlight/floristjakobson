@@ -251,6 +251,21 @@
     </section>
 
     <section>
+      <!-- HINNAFILTER – LEINAKIMBUD -->
+      <div class="price-filter">
+        <button class="price-filter-btn active" data-min="0" data-max="9999">
+          Kõik
+        </button>
+
+        <button class="price-filter-btn" data-min="95" data-max="115">
+          95–115 €
+        </button>
+
+        <button class="price-filter-btn" data-min="125" data-max="135">
+          125–135 €
+        </button>
+      </div>
+
       <div class="product-grid-leinakimp">
         <div class="product-box">
           <img
@@ -1224,6 +1239,34 @@
           });
 
           aadressiValikud.appendChild(valik);
+        });
+      });
+    </script>
+
+    <!-- HINNAFILTRI JAVASCRIPT – LEINAKIMBUD -->
+    <script>
+      document.querySelectorAll(".price-filter-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const min = Number(button.dataset.min);
+          const max = Number(button.dataset.max);
+
+          document.querySelectorAll(".price-filter-btn").forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          button.classList.add("active");
+
+          document
+            .querySelectorAll(".product-grid-leinakimp .product-box")
+            .forEach((product) => {
+              const priceText =
+                product.querySelector(".product-price")?.textContent || "";
+              const match = priceText.match(/Hind:\s*(\d+)/i);
+              const price = match ? Number(match[1]) : null;
+
+              product.style.display =
+                price !== null && price >= min && price <= max ? "" : "none";
+            });
         });
       });
     </script>

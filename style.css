@@ -322,7 +322,7 @@ section {
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -1383,5 +1383,43 @@ section {
   .call-button {
     right: 20px;
     bottom: 20px;
+  }
+}
+
+/* HINNAFILTER */
+
+.price-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 auto 30px;
+}
+
+.price-filter-btn {
+  padding: 10px 16px;
+  border: 1px solid #ccc;
+  background: white;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.price-filter-btn:hover,
+.price-filter-btn.active {
+  background: #222;
+  color: white;
+  border-color: #222;
+}
+
+@media (max-width: 800px) {
+  .price-filter {
+    gap: 8px;
+  }
+
+  .price-filter-btn {
+    flex: 1 1 45%;
+    min-width: 140px;
+    padding: 12px 10px;
   }
 }
