@@ -852,7 +852,7 @@
         <div class="order-summary" id="orderSummary" aria-live="polite">
           <h3>Tellimuse kokkuvõte</h3>
           <p id="parjaHind"></p>
-          <p>Lint tekstiga: 5 €</p>
+          <p id="lindiHindTekst"></p>
           <p>Kuller: 10 €</p>
           <p><strong id="hindKokku"></strong></p>
         </div>
@@ -1004,7 +1004,7 @@
               +372 5342 3572
             </a>
 
-            <a href="mailto:info@floristjakobson.ee">
+            <a href="mailto:floristjakobson@gmail.com">
               <svg viewBox="0 0 24 24">
                 <path
                   d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
@@ -1059,7 +1059,7 @@
             </a>
           </div>
 
-          <div class="footer-bottom">© 2026 Vilsonlight</div>
+          <div class="footer-bottom">© 2026 Jakobson WEB</div>
         </div>
       </div>
     </footer>
@@ -1100,41 +1100,46 @@
 
       const mudeliteHinnad = {
         LE1: 95,
-        LE2: 95,
-        LE3: 95,
-        LE4: 115,
-        LE5: 95,
-        LE6: 115,
-        LE7: 115,
-        LE8: 115,
-        LE9: 115,
-        LE10: 95,
-        LE11: 115,
-        LE12: 95,
-        Baham: 115,
-        Bunda: 115,
-        Maia: 115,
+        LE2: 115,
+        LE3: 125,
+        LE4: 125,
+        LE5: 125,
+        LE6: 135,
+        LE7: 125,
+        LE8: 125,
+        LE9: 135,
+        LE10: 115,
+        LE11: 135,
+        LE12: 115,
+        Baham: 125,
+        Bunda: 135,
+        Maia: 125,
         Manica: 125,
         Atik: 115,
         Heze: 115,
         Tarf: 115,
-        Thabit: 115,
+        Thabit: 125,
         Nucatai: 125,
-        Labrum: 115,
+        Labrum: 125,
         Kerb: 115,
         Nanto: 125,
         Marfak: 115,
       };
 
-      const lindiHind = 5;
       const kulleriHind = 10;
+
+      const lindiTekst = document.getElementById("text");
+      const lindiHindTekst = document.getElementById("lindiHindTekst");
 
       function uuendaTellimuseKokkuvotet() {
         const valitudMudel = mudel.value;
         const valitudParjaHind = mudeliteHinnad[valitudMudel];
+
+        const lindiHind = lindiTekst.value.trim() ? 5 : 0;
         const koguHind = valitudParjaHind + lindiHind + kulleriHind;
 
         parjaHind.textContent = `${valitudMudel}: ${valitudParjaHind} €`;
+        lindiHindTekst.textContent = `Lint tekstiga: ${lindiHind} €`;
         hindKokku.textContent = `Hind kokku: ${koguHind} €`;
 
         hinnaKokkuvote.value =
@@ -1145,6 +1150,8 @@
       }
 
       mudel.addEventListener("change", uuendaTellimuseKokkuvotet);
+      lindiTekst.addEventListener("input", uuendaTellimuseKokkuvotet);
+
       uuendaTellimuseKokkuvotet();
     </script>
 
