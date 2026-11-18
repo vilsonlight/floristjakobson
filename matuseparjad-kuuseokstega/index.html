@@ -1230,6 +1230,16 @@
         <label for="notes">11. Märkused</label>
         <textarea id="notes" name="markused" rows="3"></textarea>
 
+        <div class="order-summary" id="orderSummary" aria-live="polite">
+          <h3>Tellimuse kokkuvõte</h3>
+          <p id="parjaHind"></p>
+          <p id="lindiHindTekst"></p>
+          <p>Kuller: 10 €</p>
+          <p><strong id="hindKokku"></strong></p>
+        </div>
+
+        <input type="hidden" id="hinnaKokkuvote" name="hinna_kokkuvote" />
+
         <button type="submit">Saada tellimus</button>
 
         <p id="formMessage" class="success-message">
@@ -1424,6 +1434,8 @@
         const modelSelect = document.getElementById("model");
         modelSelect.value = productName;
 
+        modelSelect.dispatchEvent(new Event("change"));
+
         document.getElementById("orderForm").scrollIntoView({
           behavior: "smooth",
         });
@@ -1458,6 +1470,7 @@
             message.style.display = "block";
 
             form.reset();
+            uuendaTellimuseKokkuvotet();
 
             message.scrollIntoView({ behavior: "smooth" });
           } else {
@@ -1558,6 +1571,74 @@
           });
         });
       });
+    </script>
+
+    <script>
+      const mudel = document.getElementById("model");
+      const suurus = document.getElementById("size");
+      const lindiTekst = document.getElementById("text");
+
+      const parjaHind = document.getElementById("parjaHind");
+      const lindiHindTekst = document.getElementById("lindiHindTekst");
+      const hindKokku = document.getElementById("hindKokku");
+      const hinnaKokkuvote = document.getElementById("hinnaKokkuvote");
+
+      const kulleriHind = 10;
+
+      function uuendaTellimuseKokkuvotet() {
+        const valitudMudel = mudel.value;
+        const valitudSuurus = suurus.value;
+
+        const toode = Array.from(
+          document.querySelectorAll(".product-box"),
+        ).find(
+          (box) => box.querySelector("h3")?.textContent.trim() === valitudMudel,
+        );
+
+        const hinnatekst =
+          Array.from(toode?.querySelectorAll("p") || [])
+            .map((p) => p.textContent)
+            .find((t) => t.includes("Hind:")) || "";
+
+        const hinnad = [
+          ...hinnatekst.matchAll(/∅\s*(60|80)\s*cm\s*(\d+)\s*€/gi),
+        ];
+        const valitudCm = valitudSuurus.includes("80") ? "80" : "60";
+
+        const hind = valitudSuurus
+          ? Number(hinnad.find((h) => h[1] === valitudCm)?.[2] || 0)
+          : 0;
+
+        const lindiHind = lindiTekst.value.trim() ? 5 : 0;
+
+        if (!valitudSuurus || !hind) {
+          parjaHind.textContent = "Vali pärja suurus";
+          lindiHindTekst.textContent = `Lint tekstiga: ${lindiHind} €`;
+          hindKokku.textContent = "";
+          hinnaKokkuvote.value = "";
+          return;
+        }
+
+        const koguHind = hind + lindiHind + kulleriHind;
+
+        parjaHind.textContent = `${valitudMudel} (${valitudSuurus}): ${hind} €`;
+
+        lindiHindTekst.textContent = `Lint tekstiga: ${lindiHind} €`;
+
+        hindKokku.textContent = `Hind kokku: ${koguHind} €`;
+
+        hinnaKokkuvote.value =
+          `${valitudMudel} (${valitudSuurus}): ${hind} €; ` +
+          `lint tekstiga: ${lindiHind} €; ` +
+          `kuller: ${kulleriHind} €; ` +
+          `hind kokku: ${koguHind} €`;
+      }
+
+      mudel.addEventListener("change", uuendaTellimuseKokkuvotet);
+      suurus.addEventListener("change", uuendaTellimuseKokkuvotet);
+      lindiTekst.addEventListener("input", uuendaTellimuseKokkuvotet);
+
+      uuendaTellimuseKokkuvotet();
     </script>
   </body>
 </html>
