@@ -226,7 +226,30 @@
       </div>
     </section>
 
-    <section>
+    <!-- HINNAFILTER -->
+    <div class="price-filter">
+      <button class="price-filter-btn active" data-min="0" data-max="9999">
+        Kõik
+      </button>
+
+      <button class="price-filter-btn" data-min="125" data-max="135">
+        125–135 €
+      </button>
+
+      <button class="price-filter-btn" data-min="145" data-max="165">
+        145–165 €
+      </button>
+
+      <button class="price-filter-btn" data-min="175" data-max="210">
+        175–210 €
+      </button>
+
+      <button class="price-filter-btn" data-min="310" data-max="360">
+        Premium 310–360 €
+      </button>
+    </div>
+
+    <section id="tavalised-parjad">
       <div class="product-section-title">
         <h2>Matusepärjad kuuseokstega – valik ja hinnad</h2>
         <p>
@@ -237,106 +260,7 @@
         </p>
       </div>
 
-      <!-- HINNAFILTER -->
-      <div class="price-filter">
-        <button class="price-filter-btn active" data-min="0" data-max="9999">
-          Kõik
-        </button>
-
-        <button class="price-filter-btn" data-min="125" data-max="135">
-          125–135 €
-        </button>
-
-        <button class="price-filter-btn" data-min="145" data-max="165">
-          145–165 €
-        </button>
-
-        <button class="price-filter-btn" data-min="185" data-max="210">
-          185–210 €
-        </button>
-      </div>
-
       <div class="product-grid">
-        <div class="product-box">
-          <img
-            src="/images/Matuseparjad-Tallinnas-Bach.webp"
-            alt="Luksuslik matusepärg roosidest ja liiliatest"
-            width="800"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Bach</h3>
-          <p>roos, liilia</p>
-          <p>Hind: ∅60cm 210€, ∅80cm 250€</p>
-          <a
-            href="#orderForm"
-            class="cta-button"
-            onclick="selectProduct('Bach')"
-            >Telli</a
-          >
-        </div>
-
-        <div class="product-box">
-          <img
-            src="/images/Matuseparjad-kulleriga-Beethoven.webp"
-            alt="Premiumpärg hortensiatest Tallinnasse"
-            width="800"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Beethoven</h3>
-          <p>roos, hortensia, krüsanteem</p>
-          <p>Hind: ∅60cm 210€, ∅80cm 250€</p>
-          <a
-            href="#orderForm"
-            class="cta-button"
-            onclick="selectProduct('Beethoven')"
-            >Telli</a
-          >
-        </div>
-
-        <div class="product-box">
-          <img
-            src="/images/Matuseparjad-kulleriga-Vivaldi.webp"
-            alt="Matusepärg kuldsete roosidega"
-            width="800"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Vivaldi</h3>
-          <p>roos, liilia, krüsanteem</p>
-          <p>Hind: ∅60cm 185€, ∅80cm 225€</p>
-          <a
-            href="#orderForm"
-            class="cta-button"
-            onclick="selectProduct('Vivaldi')"
-            >Telli</a
-          >
-        </div>
-
-        <div class="product-box">
-          <img
-            src="/images/Matuseparjad-kulleriga-Mozart.webp"
-            alt="Matusepärg roosidest ja liiliatest"
-            width="800"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Mozart</h3>
-          <p>valge ja punane roos, liilia</p>
-          <p>Hind: ∅60cm 210€, ∅80cm 250€</p>
-          <a
-            href="#orderForm"
-            class="cta-button"
-            onclick="selectProduct('Mozart')"
-            >Telli</a
-          >
-        </div>
-
         <div class="product-box">
           <img
             src="/images/Alnitak.webp"
@@ -673,46 +597,6 @@
             href="#orderForm"
             class="cta-button"
             onclick="selectProduct('Kocab')"
-            >Telli</a
-          >
-        </div>
-
-        <div class="product-box">
-          <img
-            src="/images/strauss.webp"
-            alt="Matusepärg hortensiatest"
-            width="800"
-            height="1200"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Strauss</h3>
-          <p>hortensia ja roos</p>
-          <p>Hind: ∅60cm 185€, ∅80cm 225€</p>
-          <a
-            href="#orderForm"
-            class="cta-button"
-            onclick="selectProduct('Strauss')"
-            >Telli</a
-          >
-        </div>
-
-        <div class="product-box">
-          <img
-            src="/images/Matuseparg-Tallinnas-Enif.webp"
-            alt="Värviline matusepärg"
-            width="480"
-            height="720"
-            loading="lazy"
-            decoding="async"
-          />
-          <h3>Enif</h3>
-          <p>Krüsanteem, liilia, anemoon ja preeriakell</p>
-          <p>Hind: ∅60cm 165€, ∅80cm 205€</p>
-          <a
-            href="#orderForm"
-            class="cta-button"
-            onclick="selectProduct('Enif')"
             >Telli</a
           >
         </div>
@@ -1056,6 +940,142 @@
             >Telli</a
           >
         </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM MATUSEPÄRJAD -->
+    <section id="premium-parjad">
+      <div class="product-section-title">
+        <h2>Premium matusepärjad</h2>
+        <p>
+          Eksklusiivsed ja rikkalikud matusepärjad väärikaks viimseks
+          austusavalduseks. Hoolikalt valitud lilled, suurejoonelised
+          kompositsioonid ja läbimõeldud värvilahendused.
+        </p>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-box">
+          <img
+            src="/images/Matuseparjad-Tallinnas-Bach.webp"
+            alt="Luksuslik matusepärg roosidest ja liiliatest"
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Bach</h3>
+          <p>roos, liilia</p>
+          <p>Hind: ∅60cm 320€, ∅80cm 360€</p>
+          <a
+            href="#orderForm"
+            class="cta-button"
+            onclick="selectProduct('Bach')"
+            >Telli</a
+          >
+        </div>
+
+        <div class="product-box">
+          <img
+            src="/images/Matuseparjad-kulleriga-Beethoven.webp"
+            alt="Premiumpärg hortensiatest Tallinnasse"
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Beethoven</h3>
+          <p>roos, hortensia, krüsanteem</p>
+          <p>Hind: ∅60cm 330€, ∅80cm 370€</p>
+          <a
+            href="#orderForm"
+            class="cta-button"
+            onclick="selectProduct('Beethoven')"
+            >Telli</a
+          >
+        </div>
+
+        <div class="product-box">
+          <img
+            src="/images/Matuseparjad-kulleriga-Vivaldi.webp"
+            alt="Matusepärg kuldsete roosidega"
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Vivaldi</h3>
+          <p>roos, liilia, krüsanteem</p>
+          <p>Hind: ∅60cm 310€, ∅80cm 350€</p>
+          <a
+            href="#orderForm"
+            class="cta-button"
+            onclick="selectProduct('Vivaldi')"
+            >Telli</a
+          >
+        </div>
+
+        <div class="product-box">
+          <img
+            src="/images/Matuseparjad-kulleriga-Mozart.webp"
+            alt="Matusepärg roosidest ja liiliatest"
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Mozart</h3>
+          <p>valge ja punane roos, liilia</p>
+          <p>Hind: ∅60cm 330€, ∅80cm 370€</p>
+          <a
+            href="#orderForm"
+            class="cta-button"
+            onclick="selectProduct('Mozart')"
+            >Telli</a
+          >
+        </div>
+
+        <div class="product-box">
+          <img
+            src="/images/strauss.webp"
+            alt="Matusepärg hortensiatest"
+            width="800"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Strauss</h3>
+          <p>hortensia ja roos</p>
+          <p>Hind: ∅60cm 310€, ∅80cm 350€</p>
+          <a
+            href="#orderForm"
+            class="cta-button"
+            onclick="selectProduct('Strauss')"
+            >Telli</a
+          >
+        </div>
+
+        <div class="product-box">
+          <img
+            src="/images/Matuseparg-Tallinnas-Enif.webp"
+            alt="Värviline matusepärg"
+            width="480"
+            height="720"
+            loading="lazy"
+            decoding="async"
+          />
+          <h3>Enif</h3>
+          <p>Krüsanteem, liilia, anemoon ja preeriakell</p>
+          <p>Hind: ∅60cm 310€, ∅80cm 360€</p>
+          <a
+            href="#orderForm"
+            class="cta-button"
+            onclick="selectProduct('Enif')"
+            >Telli</a
+          >
+        </div>
+
+        <!-- Siia lisame 6 premium-matusepärga -->
       </div>
     </section>
 
@@ -1504,32 +1524,38 @@
       });
     </script>
 
-    <!-- HINNAFILTRI JAVASCRIPT -->
     <script>
-      document.querySelectorAll(".price-filter-btn").forEach((button) => {
+      const filterButtons = document.querySelectorAll(".price-filter-btn");
+      const regularSection = document.getElementById("tavalised-parjad");
+      const premiumSection = document.getElementById("premium-parjad");
+
+      filterButtons.forEach((button) => {
         button.addEventListener("click", () => {
           const min = Number(button.dataset.min);
           const max = Number(button.dataset.max);
+          const showAll = min === 0;
+          const showPremium = min >= 300;
 
-          document.querySelectorAll(".price-filter-btn").forEach((btn) => {
-            btn.classList.remove("active");
-          });
-
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
           button.classList.add("active");
 
-          document
-            .querySelectorAll(".product-grid .product-box")
-            .forEach((product) => {
-              const priceText = Array.from(product.querySelectorAll("p"))
-                .map((p) => p.textContent)
-                .find((text) => text.includes("Hind:"));
+          regularSection.style.display = showAll || !showPremium ? "" : "none";
 
-              const match = priceText?.match(/60\s*cm\s*(\d+)/i);
-              const price = match ? Number(match[1]) : null;
+          premiumSection.style.display = showAll || showPremium ? "" : "none";
 
-              product.style.display =
-                price !== null && price >= min && price <= max ? "" : "none";
-            });
+          document.querySelectorAll(".product-box").forEach((product) => {
+            const priceText = Array.from(product.querySelectorAll("p"))
+              .map((p) => p.textContent)
+              .find((text) => text.includes("Hind:"));
+
+            const match = priceText?.match(/60\s*cm\s*(\d+)/i);
+            const price = match ? Number(match[1]) : null;
+
+            product.style.display =
+              showAll || (price !== null && price >= min && price <= max)
+                ? ""
+                : "none";
+          });
         });
       });
     </script>
