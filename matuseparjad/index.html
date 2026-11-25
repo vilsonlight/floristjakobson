@@ -95,7 +95,6 @@
         ]
       }
     </script>
-
   </head>
 
   <body>
@@ -189,29 +188,33 @@
       <div class="intro-container">
         <p>
           Florist Jakobson valmistab matusepärgi Tallinnasse ja Harjumaale.
-          Oleme spetsialiseerunud leinatöödele alates 1995. aastast.
-          Valikus on traditsioonilised kuuseokstega ning täislilledest
-          matusepärjad. Tellimused toimetame kohale oma kulleriga;
-          kahe või enama toote tellimisel on tarne tasuta.
+          Oleme spetsialiseerunud leinatöödele alates 1995. aastast. Valikus on
+          traditsioonilised kuuseokstega ning täislilledest matusepärjad.
+          Tellimused toimetame kohale oma kulleriga; kahe või enama toote
+          tellimisel on tarne tasuta.
         </p>
       </div>
     </section>
 
-    <!-- KATEGOORIAD – avalehega sama hello-kujundus -->
-    <section class="hello" aria-label="Matusepärgade valik">
+    <section class="hello wreath-categories" aria-label="Matusepärgade valik">
       <div class="hello-row">
         <div class="hello-text reveal-left">
           <h2>Matusepärjad kuuseokstega</h2>
           <p>
             Kuuseokstega matusepärg on traditsiooniline ja väärikas valik
             viimseks austusavalduseks. Pärg valmistatakse kuuseokstest
-            metallrõngale ning lilled paigutatakse märjale oaasialusele.
-            Valikus on 60 ja 80 cm läbimõõduga pärjad.
+            metallrõngale ning lilled paigutatakse märjale oaasialusele. Valikus
+            on 60 ja 80 cm läbimõõduga pärjad.
           </p>
-          <a href="/matuseparjad-kuuseokstega/" class="cta-button">Vaata matusepärgi</a>
+          <a href="/matuseparjad-kuuseokstega/" class="cta-button"
+            >Vaata matusepärgi</a
+          >
         </div>
         <div class="hello-image reveal-right">
-          <a href="/matuseparjad-kuuseokstega/" aria-label="Vaata kuuseokstega matusepärgi">
+          <a
+            href="/matuseparjad-kuuseokstega/"
+            aria-label="Vaata kuuseokstega matusepärgi"
+          >
             <img
               src="/images/m.webp"
               alt="Kuuseokstega matusepärg Tallinnas ja Harjumaal"
@@ -226,14 +229,19 @@
         <div class="hello-text reveal-right">
           <h2>Täislilledest matusepärjad</h2>
           <p>
-            Täislilledest matusepärjas katavad lilled kogu pärja pinna.
-            Lilled seatakse ümmargusele märjale oaasialusele, mis aitab
-            säilitada seade kuju. Valikus on 50 ja 60 cm läbimõõduga pärjad.
+            Täislilledest matusepärjas katavad lilled kogu pärja pinna. Lilled
+            seatakse ümmargusele märjale oaasialusele, mis aitab säilitada seade
+            kuju. Valikus on 50 ja 60 cm läbimõõduga pärjad.
           </p>
-          <a href="/matuseparjad-taislilledest/" class="cta-button">Vaata matusepärgi</a>
+          <a href="/matuseparjad-taislilledest/" class="cta-button"
+            >Vaata matusepärgi</a
+          >
         </div>
         <div class="hello-image reveal-left">
-          <a href="/matuseparjad-taislilledest/" aria-label="Vaata täislilledest matusepärgi">
+          <a
+            href="/matuseparjad-taislilledest/"
+            aria-label="Vaata täislilledest matusepärgi"
+          >
             <img
               src="/images/Matuste-kombed-5.webp"
               alt="Täislilledest matusepärg Tallinnas ja Harjumaal"
@@ -425,8 +433,6 @@
       }
     </script>
 
-
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.querySelector(".menu-toggle");
@@ -437,18 +443,22 @@
         });
       });
     </script>
+
     <!-- Samad õrnad reveal-animatsioonid, mis Florist Jakobsoni avalehel -->
     <script>
       const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
       if ("IntersectionObserver" in window) {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("reveal-active");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15 });
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-active");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
         reveals.forEach((item) => observer.observe(item));
       } else {
         reveals.forEach((item) => item.classList.add("reveal-active"));

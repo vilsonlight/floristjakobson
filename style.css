@@ -1423,3 +1423,148 @@ section {
     padding: 12px 10px;
   }
 }
+
+/* MATUSEPÄRGADE KATEGOORIATE VALIK */
+
+.wreath-categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.wreath-categories .hello-row {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+  gap: 25px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.wreath-categories .hello-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wreath-categories .hello-image {
+  flex: none;
+}
+
+.wreath-categories h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+}
+
+.wreath-categories .hello-image img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.wreath-categories .hello-text p {
+  flex: 1;
+}
+
+.wreath-categories .cta-button {
+  margin-top: 20px;
+}
+
+/* MOBIILIVAADE */
+
+@media (max-width: 800px) {
+  .wreath-categories {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 30px 18px;
+  }
+}
+
+/* MATUSEPÄRGADE RIPPMENÜÜ */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.submenu-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+nav .nav-submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: none;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  min-width: 260px;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+nav .nav-submenu a {
+  display: block;
+  padding: 12px 18px;
+  white-space: nowrap;
+}
+
+nav .nav-submenu a:hover {
+  background: #f5f5f5;
+}
+
+.nav-dropdown.open > .nav-submenu {
+  display: flex;
+}
+
+/* MOBIILIVAADE */
+
+@media (max-width: 700px) {
+  .nav-menu .nav-dropdown > a {
+    display: inline-block;
+    width: auto;
+  }
+
+  nav .nav-submenu {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    box-shadow: none;
+    background: #f5f5f5;
+  }
+
+  nav .nav-submenu a {
+    white-space: normal;
+    font-size: 0.95rem;
+  }
+}
+
+/* RIPPMENÜÜ AUTOMAATNE AVANEMINE ARVUTIS */
+
+@media (min-width: 701px) and (hover: hover) and (pointer: fine) {
+  .nav-dropdown > .submenu-toggle {
+    display: none;
+  }
+
+  .nav-dropdown:hover > .nav-submenu,
+  .nav-dropdown:focus-within > .nav-submenu {
+    display: flex;
+  }
+
+  .nav-dropdown {
+    padding: 12px 0;
+  }
+
+  nav .nav-submenu {
+    padding: 8px 0;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+}
