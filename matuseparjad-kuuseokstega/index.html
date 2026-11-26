@@ -116,17 +116,37 @@
       <button class="menu-toggle" type="button" aria-label="Menüü">☰</button>
 
       <ul class="nav-menu">
-        <li><a href="/matuseparjad/">Matusepärjad</a></li>
-        <li>
-          <a href="/matuseparjad-kuuseokstega/" aria-current="page"
-            >Matusepärjad kuuseokstega</a
+        <li class="nav-dropdown">
+          <a href="/matuseparjad/">Matusepärjad</a>
+
+          <button
+            class="submenu-toggle"
+            type="button"
+            aria-label="Ava matusepärgade kategooriad"
+            aria-expanded="false"
           >
+            ⌄
+          </button>
+
+          <ul class="nav-submenu">
+            <li>
+              <a href="/matuseparjad-kuuseokstega/">
+                Matusepärjad kuuseokstega
+              </a>
+            </li>
+
+            <li>
+              <a href="/matuseparjad-taislilledest/">
+                Täislilledest matusepärjad
+              </a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="/matuseparjad-taislilledest/">Matusepärjad täislilledest</a>
-        </li>
+
         <li><a href="/leinakimbud/">Leinakimbud</a></li>
         <li><a href="/sarikaparjad/">Sarikapärjad</a></li>
+        <li><a href="/lein-ja-lootus/">Lein ja lootus</a></li>
+        <li><a href="/blogi/" aria-current="page">Blogi</a></li>
       </ul>
     </nav>
 
@@ -1018,7 +1038,7 @@
 
         <div class="product-box">
           <img
-            src="/images/Matuseparjad-kulleriga-Mozart.webp"
+            src="/images/Mozart.webp"
             alt="Matusepärg roosidest ja liiliatest"
             width="800"
             height="1200"
@@ -1077,24 +1097,6 @@
         </div>
 
         <!-- Siia lisame 6 premium-matusepärga -->
-      </div>
-    </section>
-
-    <!-- VIIDE TÄISLILLEDEST MATUSEPÄRGADE ERALDI LEHELE -->
-    <section class="seo-section">
-      <div class="seo-container">
-        <div class="seo-box">
-          <h2>Matusepärjad Täislilledest</h2>
-          <p>
-            Vaata ka üleni lilledest valmistatud matusepärgi, mille läbimõõt on
-            50 või 60 cm.
-          </p>
-          <p>
-            <a href="/matuseparjad-taislilledest/" class="cta-button"
-              >Vaata matusepärgi täislilledest</a
-            >
-          </p>
-        </div>
       </div>
     </section>
 
